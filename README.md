@@ -8,7 +8,7 @@ website running on Cloudflare Workers.
 In your static website repo, install this package:
 
 ```bash
-npm i @designsystemsinternational/cloudflare-auth
+npm i @designsystemsinternational/cloudflare-password
 ```
 
 Then, make sure that your build process copies the auth templates into an `auth`
@@ -17,7 +17,7 @@ folder in your build output:
 ```json
 {
   "scripts": {
-    "build": "vite build && mkdir -p dist/auth && cp -r node_modules/@designsystemsinternational/cloudflare-auth/dist/* dist/auth/"
+    "build": "vite build && mkdir -p dist/auth && cp -r node_modules/@designsystemsinternational/cloudflare-password/dist/* dist/auth/"
   }
 }
 ```
@@ -29,7 +29,7 @@ Then, add the following to your `wrangler.jsonc` file:
   "name": "my-website",
   "compatibility_date": "2025-12-08",
   // This makes sure that the worker runs as a part of the deployment
-  "main": "./node_modules/@designsystemsinternational/cloudflare-auth/src/worker.ts",
+  "main": "./node_modules/@designsystemsinternational/cloudflare-password/src/worker.ts",
   "assets": {
     // This should be your normal build directory
     "directory": "./dist",
