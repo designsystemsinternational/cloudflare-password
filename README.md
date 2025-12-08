@@ -1,69 +1,49 @@
-# React + TypeScript + Vite
+# DSI Auth
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This package can be used to add simple password-based authentication to a static
+website running on Cloudflare Workers.
 
-Currently, two official plugins are available:
+## Usage
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+In your static website repo, install this package:
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+npm i @designsystemsinternational/cloudflare-auth
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+Then, make sure that your build process copies the auth templates into an `auth`
+folder in your build output:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```json
+{
+  "scripts": {
+    "build": "vite build && mkdir -p dist/auth && cp -r node_modules/@designsystemsinternational/cloudflare-auth/dist/* dist/auth/"
+  }
+}
 ```
+
+Then, add the following to your `wrangler.jsonc` file:
+
+```jsonc
+{
+  "name": "my-website",
+  "compatibility_date": "2025-12-08",
+  // This makes sure that the worker runs as a part of the deployment
+  "main": "./node_modules/@designsystemsinternational/cloudflare-auth/src/worker.ts",
+  "assets": {
+    // This should be your normal build directory
+    "directory": "./dist",
+    // This is to serve the website as an SPA
+    "not_found_handling": "single-page-application",
+    // This name cannot be changed
+    "binding": "ASSETS",
+    // This makes sure that the worker runs before serving static assets
+    // Can use array of globs to protect certain files
+    "run_worker_first": true
+  }
+}
+```
+
+## Local testing
+
+The package is set up to run a local instance of
