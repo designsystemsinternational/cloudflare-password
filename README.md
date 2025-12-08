@@ -35,7 +35,6 @@ Then, add the following to your `wrangler.jsonc` file:
     "directory": "./dist",
     // This is to serve the website as an SPA
     "not_found_handling": "single-page-application",
-    // This name cannot be changed
     "binding": "ASSETS",
     // This makes sure that the worker runs before serving static assets
     // Can use array of globs to protect certain files
@@ -46,4 +45,21 @@ Then, add the following to your `wrangler.jsonc` file:
 
 ## Local testing
 
-The package is set up to run a local instance of
+Because of the way Cloudflare workers operate, it's hard to have a single local
+development command to test the entire flow while preserving hot module
+reloading. So, the development scripts are divided into two:
+
+If you want to design the auth templates, run the normal Vite dev server, which
+serves the login page on the root path. The actual login won't work, but you can
+use this for a nice development environment for the HTML, CSS and JS:
+
+```bash
+npm run dev:templates
+```
+
+Once the templates are done, you can test the entire login flow using the normal
+dev script:
+
+```bash
+npm run dev
+```

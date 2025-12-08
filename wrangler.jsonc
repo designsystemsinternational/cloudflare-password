@@ -1,4 +1,4 @@
-// This file is simply used to test the package locally and on Cloudflare
+// This file is simply used to test the package locally
 {
   "$schema": "node_modules/wrangler/config-schema.json",
   "name": "auth-test",

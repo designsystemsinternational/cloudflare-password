@@ -11,7 +11,13 @@ function App() {
     })
       .then((res) => res.json())
       .then((data) => {
-        console.log(data);
+        if (data.success === true) {
+          const urlParams = new URLSearchParams(window.location.search);
+          const next = urlParams.get("next") || "/";
+          window.location.href = next;
+        } else {
+          alert("Invalid password");
+        }
       })
       .catch((err) => {
         console.error(err);

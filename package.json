@@ -4,10 +4,10 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "tsc -b && vite build",
+    "dev:templates": "vite",
+    "dev": "npm run build:templates && wrangler dev",
+    "build:templates": "tsc -b && vite build",
     "lint": "eslint .",
-    "preview": "npm run build && vite preview",
     "deploy": "npm run build && wrangler deploy",
     "cf-typegen": "wrangler types"
   },
