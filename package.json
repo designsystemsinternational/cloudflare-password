@@ -5,8 +5,8 @@
   "type": "module",
   "scripts": {
     "dev:templates": "vite",
-    "dev": "npm run build:templates && wrangler dev",
-    "build:templates": "tsc -b && vite build",
+    "dev": "npm run build && wrangler dev",
+    "build": "tsc -b && vite build",
     "lint": "eslint .",
     "deploy": "npm run build && wrangler deploy",
     "cf-typegen": "wrangler types"
