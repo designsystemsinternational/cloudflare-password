@@ -1,0 +1,450 @@
+/* Regular */
+
+@font-face {
+  font-family: "Univers";
+  src: url("/fonts/UniversNextPro-UltLt.woff2") format("woff2");
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Univers";
+  src: url("/fonts/UniversNextPro-UltLtIt.woff2") format("woff2");
+  font-weight: 100;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Univers";
+  src: url("/fonts/UniversNextPro-Thin.woff2") format("woff2");
+  font-weight: 200;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Univers";
+  src: url("/fonts/UniversNextPro-ThinItalic.woff2") format("woff2");
+  font-weight: 200;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Univers";
+  src: url("/fonts/UniversNextPro-Light.woff2") format("woff2");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Univers";
+  src: url("/fonts/UniversNextPro-LightItalic.woff2") format("woff2");
+  font-weight: 300;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Univers";
+  src: url("/fonts/UniversNextPro-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Univers";
+  src: url("/fonts/UniversNextPro-Italic.woff2") format("woff2");
+  font-weight: 400;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Univers";
+  src: url("/fonts/UniversNextPro-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Univers";
+  src: url("/fonts/UniversNextPro-MediumItalic.woff2") format("woff2");
+  font-weight: 500;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Univers";
+  src: url("/fonts/UniversNextPro-Bold.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Univers";
+  src: url("/fonts/UniversNextPro-BoldItalic.woff2") format("woff2");
+  font-weight: 600;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Univers";
+  src: url("/fonts/UniversNextPro-Heavy.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Univers";
+  src: url("/fonts/UniversNextPro-HeavyItalic.woff2") format("woff2");
+  font-weight: 700;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Univers";
+  src: url("/fonts/UniversNextPro-Black.woff2") format("woff2");
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Univers";
+  src: url("/fonts/UniversNextPro-BlackItalic.woff2") format("woff2");
+  font-weight: 800;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Univers";
+  src: url("/fonts/UniversNextPro-XBlack.woff2") format("woff2");
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Univers";
+  src: url("/fonts/UniversNextPro-XBlackIt.woff2") format("woff2");
+  font-weight: 900;
+  font-style: italic;
+}
+
+/* Compressed */
+
+@font-face {
+  font-family: "Univers Compressed";
+  src: url("/fonts/UniversNextPro-UltLtCm.woff2") format("woff2");
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Univers Compressed";
+  src: url("/fonts/UniversNextPro-ThinCm.woff2") format("woff2");
+  font-weight: 200;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Univers Compressed";
+  src: url("/fonts/UniversNextPro-LightCm.woff2") format("woff2");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Univers Compressed";
+  src: url("/fonts/UniversNextPro-Compressed.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Univers Compressed";
+  src: url("/fonts/UniversNextPro-MediumCm.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+}
+
+/* Condensed */
+
+@font-face {
+  font-family: "Univers Condensed";
+  src: url("/fonts/UniversNextPro-UltLtCond.woff2") format("woff2");
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Univers Condensed";
+  src: url("/fonts/UniversNextPro-UltLtCondIt.woff2") format("woff2");
+  font-weight: 100;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Univers Condensed";
+  src: url("/fonts/UniversNextPro-ThinCond.woff2") format("woff2");
+  font-weight: 200;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Univers Condensed";
+  src: url("/fonts/UniversNextPro-ThinCondIt.woff2") format("woff2");
+  font-weight: 200;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Univers Condensed";
+  src: url("/fonts/UniversNextPro-LightCond.woff2") format("woff2");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Univers Condensed";
+  src: url("/fonts/UniversNextPro-LightCondIt.woff2") format("woff2");
+  font-weight: 300;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Univers Condensed";
+  src: url("/fonts/UniversNextPro-Cond.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Univers Condensed";
+  src: url("/fonts/UniversNextPro-CondItalic.woff2") format("woff2");
+  font-weight: 400;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Univers Condensed";
+  src: url("/fonts/UniversNextPro-MediumCond.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Univers Condensed";
+  src: url("/fonts/UniversNextPro-MediumCondIt.woff2") format("woff2");
+  font-weight: 500;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Univers Condensed";
+  src: url("/fonts/UniversNextPro-BoldCond.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Univers Condensed";
+  src: url("/fonts/UniversNextPro-BoldCondIt.woff2") format("woff2");
+  font-weight: 600;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Univers Condensed";
+  src: url("/fonts/UniversNextPro-HeavyCond.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Univers Condensed";
+  src: url("/fonts/UniversNextPro-HeavyCondIt.woff2") format("woff2");
+  font-weight: 700;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Univers Condensed";
+  src: url("/fonts/UniversNextPro-BlackCond.woff2") format("woff2");
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Univers Condensed";
+  src: url("/fonts/UniversNextPro-BlackCondIt.woff2") format("woff2");
+  font-weight: 800;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Univers Condensed";
+  src: url("/fonts/UniversNextPro-XBlackCond.woff2") format("woff2");
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Univers Condensed";
+  src: url("/fonts/UniversNextPro-XBlackCondIt.woff2") format("woff2");
+  font-weight: 900;
+  font-style: italic;
+}
+
+/* Extended */
+
+@font-face {
+  font-family: "Univers Extended";
+  src: url("/fonts/UniversNextPro-UltLtExt.woff2") format("woff2");
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Univers Extended";
+  src: url("/fonts/UniversNextPro-UltLtExtIt.woff2") format("woff2");
+  font-weight: 100;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Univers Extended";
+  src: url("/fonts/UniversNextPro-ThinExt.woff2") format("woff2");
+  font-weight: 200;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Univers Extended";
+  src: url("/fonts/UniversNextPro-ThinExtIt.woff2") format("woff2");
+  font-weight: 200;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Univers Extended";
+  src: url("/fonts/UniversNextPro-LightExt.woff2") format("woff2");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Univers Extended";
+  src: url("/fonts/UniversNextPro-LightExtIt.woff2") format("woff2");
+  font-weight: 300;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Univers Extended";
+  src: url("/fonts/UniversNextPro-Ext.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Univers Extended";
+  src: url("/fonts/UniversNextPro-ExtItalic.woff2") format("woff2");
+  font-weight: 400;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Univers Extended";
+  src: url("/fonts/UniversNextPro-MediumExt.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Univers Extended";
+  src: url("/fonts/UniversNextPro-MediumExtIt.woff2") format("woff2");
+  font-weight: 500;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Univers Extended";
+  src: url("/fonts/UniversNextPro-BoldExt.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Univers Extended";
+  src: url("/fonts/UniversNextPro-BoldExtIt.woff2") format("woff2");
+  font-weight: 600;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Univers Extended";
+  src: url("/fonts/UniversNextPro-HeavyExt.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Univers Extended";
+  src: url("/fonts/UniversNextPro-HeavyExtIt.woff2") format("woff2");
+  font-weight: 700;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Univers Extended";
+  src: url("/fonts/UniversNextPro-BlackExt.woff2") format("woff2");
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Univers Extended";
+  src: url("/fonts/UniversNextPro-BlackExtIt.woff2") format("woff2");
+  font-weight: 800;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Univers Extended";
+  src: url("/fonts/UniversNextPro-XBlackExt.woff2") format("woff2");
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Univers Extended";
+  src: url("/fonts/UniversNextPro-XBlackExtIt.woff2") format("woff2");
+  font-weight: 900;
+  font-style: italic;
+}
+
+/* Typewriter */
+
+@font-face {
+  font-family: "Univers Typewriter";
+  src: url("/fonts/UniversNextTypewrtrPro-Rg.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Univers Typewriter";
+  src: url("/fonts/UniversNextTypewrtrPro-It.woff2") format("woff2");
+  font-weight: 400;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Univers Typewriter";
+  src: url("/fonts/UniversNextTypewrtrPro-Bd.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Univers Typewriter";
+  src: url("/fonts/UniversNextTypewrtrPro-BdIt.woff2") format("woff2");
+  font-weight: 600;
+  font-style: italic;
+}

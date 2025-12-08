@@ -1,0 +1,17 @@
+:root {
+  --font-compressed: "Univers Compressed";
+  --font-condensed: "Univers Condensed";
+  --font-regular: "Univers";
+  --font-extended: "Univers Extended";
+  --font-typewriter: "Univers Typewriter";
+
+  --font-weight-ultralight: 100;
+  --font-weight-thin: 200;
+  --font-weight-light: 300;
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-bold: 600;
+  --font-weight-heavy: 700;
+  --font-weight-black: 800;
+  --font-weight-extrablack: 900;
+}

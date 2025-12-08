@@ -1,4 +1,4 @@
-import "./App.css";
+import styles from "./App.module.css";
 
 function App() {
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
@@ -26,12 +26,23 @@ function App() {
 
   return (
     <div>
-      <h1>Authentication Required</h1>
-      <form onSubmit={handleSubmit}>
-        <label htmlFor="password">Password</label>
-        <input type="password" name="password" placeholder="Password" />
-        <button type="submit">Authenticate</button>
-      </form>
+      <div className={styles.logo}>
+        <div>Design</div>
+        <div>Systems</div>
+        <div>International</div>
+      </div>
+      <div className={styles.container}>
+        <div className={styles.box}>
+          <h1>Password required</h1>
+          <form onSubmit={handleSubmit}>
+            <label htmlFor="password">
+              Please enter your password to get access.
+            </label>
+            <input type="password" name="password" placeholder="Password" />
+            <button type="submit">Authenticate</button>
+          </form>
+        </div>
+      </div>
     </div>
   );
 }
