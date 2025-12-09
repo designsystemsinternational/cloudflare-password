@@ -1,0 +1,9 @@
+/**
+ * Breakpoints, but defined as custom media,
+ * so we can do @media (--sm) in our custom CSS.
+ */
+@custom-media --sm (min-width: 42rem);
+@custom-media --md (min-width: 56rem);
+@custom-media --lg (min-width: 72rem);
+@custom-media --xl (min-width: 100rem);
+@custom-media --max (min-width: 120rem);

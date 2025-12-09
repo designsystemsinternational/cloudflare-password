@@ -1,0 +1,5 @@
+.cell {
+  max-width: 100%;
+  padding-right: var(--spacing-layout-gutter);
+  padding-left: var(--spacing-layout-gutter);
+}
