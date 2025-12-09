@@ -1,43 +1,116 @@
+.root {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-content: center;
+  align-items: end;
+  min-height: 100vh;
+  width: 100vw;
+  padding-bottom: var(--spacing-layout-gutter);
+}
+
+@media (--md) {
+  .root {
+    align-items: center;
+  }
+}
+
 .logo {
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
-  display: flex;
-  padding: 0.5rem;
-  font-size: 18px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  font-size: var(--text-sm);
+  font-weight: var(--font-weight-medium);
 }
 
-.logo > div {
-  flex: 0 0 33%;
+.logo>div {
+  padding-top: var(--spacing-layout-gutter);
+  padding-right: var(--spacing-layout-gutter);
+  padding-left: var(--spacing-layout-gutter);
 }
 
-.logo > div:last-child {
+.logo>div:last-child {
   text-align: right;
 }
 
 .container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  width: 100vw;
+  padding-right: var(--spacing-layout-gutter);
+  padding-left: var(--spacing-layout-gutter);
+  grid-column: 1 / -1;
+}
+
+@media (--md) {
+  .container {
+    grid-column: 2 / 3;
+  }
 }
 
 .box {
-  padding: 1rem;
-  background-color: white;
-  color: black;
-  flex: 0 0 33%;
-  min-height: 400px;
-}
-
-.box h1 {
-  margin-top: 0;
+  --input-padding: calc(1.2 * var(--spacing-sm)) var(--spacing-sm) var(--spacing-sm);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: var(--spacing-xl);
+  padding: var(--spacing-sm);
+  background-color: var(--color-overlay);
+  border-radius: var(--radius-sm);
+  backdrop-filter: var(--backdrop-filter);
 }
 
 .box form {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: var(--spacing-2xs);
+}
+
+.box [aria-busy] {
+  opacity: 0.5;
+  cursor: wait;
+}
+
+.box input {
+  border: 1px solid var(--color-border-default);
+  padding: var(--input-padding);
+  font-size: var(--text-sm);
+  border-radius: var(--radius-xs);
+  outline: none;
+  font-family: var(--font-mono);
+}
+
+.box input:not([aria-busy]):focus {
+  border-color: var(--color-border-focus);
+}
+
+.box button {
+  background: var(--color-bg-inverted-primary);
+  color: var(--color-text-inverted-primary);
+  font-size: var(--text-sm);
+  padding: var(--input-padding);
+  border-radius: var(--radius-xs);
+}
+
+.box button:not([aria-busy]):hover {
+  background: var(--color-bg-inverted-secondary);
+  cursor: pointer;
+}
+
+.errorBox[aria-hidden] {
+  visibility: hidden;
+}
+
+.errorBox {
+  padding: var(--spacing-sm);
+  background: var(--color-bg-inverted-tertiary);
+  line-height: var(--leading-loose);
+  border-radius: var(--radius-xs);
+}
+
+.errorBox a {
+  font-weight: var(--font-weight-medium);
+}
+
+.errorBox a:hover {
+  text-decoration: underline;
 }

@@ -1,17 +1,195 @@
 :root {
-  --font-compressed: "Univers Compressed";
-  --font-condensed: "Univers Condensed";
-  --font-regular: "Univers";
-  --font-extended: "Univers Extended";
-  --font-typewriter: "Univers Typewriter";
+  /* BASE COLOR SCALES 
+   * ====================================================================
+   *
+   * ALWAYS! define them in rgb values, so we can
+   * use them like this rgb(var(--base-color-name));
+   *
+   * NEVER! use them directly, these should be mapped
+   * to semantically named color names to use instead.
+   */
+  --base-color-black: 0, 0, 0;
+  --base-color-white: 255, 255, 255;
+  --base-color-grey-100: 240, 240, 240;
+  --base-color-grey-300: 204, 204, 204;
+  --base-color-grey-500: 136, 136, 136;
+  --base-color-grey-800: 35, 35, 35;
+  --base-color-grey-900: 15, 15, 15;
 
-  --font-weight-ultralight: 100;
-  --font-weight-thin: 200;
-  --font-weight-light: 300;
+  /* SEMANTICALLY NAMED COLOR
+   * =================================================================== 
+   
+   /* Text 
+    *
+    * Any custom property that starts with --color-text will 
+    * also automatically be turned into .text- utility class,
+    * so --color-text-primary will create the .text-primary
+    * utility class.
+    * */
+  --color-text-primary: rgb(var(--base-color-black));
+  --color-text-secondary: rgb(var(--base-color-grey-500));
+  --color-text-tertiary: rgb(var(--base-color-grey-300));
+  --color-text-inverted-primary: rgb(var(--base-color-white));
+  --color-text-inverted-secondary: rgba(var(--base-color-white), 50%);
+
+  /* Background 
+   *
+   * Any custom property that starts with --color-bg will 
+   * also automatically be turned into .bg utility class,
+   * so --color-bg-primary will create the .bg-primary
+   * utility class.
+   */
+  --color-bg-primary: rgb(var(--base-color-white));
+  --color-bg-secondary: rgb(var(--base-color-grey-100));
+  --color-bg-inverted-primary: rgb(var(--base-color-black));
+  --color-bg-inverted-secondary: rgb(var(--base-color-grey-800));
+  --color-bg-inverted-tertiary: rgba(var(--base-color-black), 7.5%);
+
+  /* Overlays */
+  --color-overlay: rgba(var(--base-color-white), 40%);
+  --color-overlay-inverted: rgba(var(--base-color-black), 80%);
+
+  /* Borders */
+  --color-border-default: rgba(var(--base-color-black), 10%);
+  --color-border-focus: rgb(var(--base-color-grey-800));
+
+  /* SPACING 
+   *
+   * Any custom property that starts with --spacing-
+   * will yield utility classes for padding, margin,
+   * gap, and stack.
+   *
+   * =================================================================== */
+  --spacing-4xs: fluid(2px, 4px);
+  --spacing-3xs: fluid(4px, 6px);
+  --spacing-2xs: fluid(6px, 8px);
+  --spacing-xs: fluid(8px, 12px);
+  --spacing-sm: fluid(12px, 16px);
+  --spacing-md: fluid(16px, 24px);
+  --spacing-lg: fluid(24px, 32px);
+  --spacing-xl: fluid(32px, 48px);
+  --spacing-2xl: fluid(48px, 64px);
+  --spacing-3xl: fluid(64px, 96px);
+  --spacing-4xl: fluid(80px, 144px);
+  --spacing-5xl: fluid(144px, 220px);
+
+  /* Semantically named spacings */
+  --spacing-layout-gutter: fluid(8px, 10px);
+  --spacing-grid-gap: calc(2 * var(--spacing-layout-gutter));
+
+  /* TYPOGRAPHY 
+   * =================================================================== 
+   *
+   * Sizes */
+  --text-xs: fluid(13px, 14px);
+  --text-sm: fluid(14px, 17px);
+
+  /* Line Heights 
+   *
+   * Any custom property that starts with --leading will
+   * be turned into a .leading- utility class.
+   * */
+  --leading-none: 1;
+  --leading-tight: 1.05;
+  --leading-normal: 1.25;
+  --leading-loose: 1.5;
+
+  /* Letter Spacings 
+   *
+   * Any custom property that starts with --tracking will
+   * be turned into a .tracking utility class.
+   * */
+  --tracking-widest: 0.05em;
+  --tracking-wider: 0.025em;
+  --tracking-wide: 0.001em;
+  --tracking-none: 0;
+  --tracking-tight: -0.01em;
+  --tracking-tighter: -0.02em;
+  --tracking-tightest: -0.04em;
+
+  /* Font Families */
+  --font-sans: "Univers", sans-serif;
+  --font-mono: "Typewriter", monospace;
+
+  /* Text Measures 
+   *
+   * Any custom property that starts with --measure will
+   * be turned into a .measure utility class.
+   */
+  --measure-xs: 30ch;
+  --measure-s: 40ch;
+  --measure-m: 55ch;
+  --measure-l: 75ch;
+  --measure-xl: 80ch;
+  --measure-2xl: 100ch;
+
+  /* Font Weights 
+   *
+   * Any custom property that starts with --font-weight- will
+   * be turned into a .weight utility class.
+   */
   --font-weight-regular: 400;
-  --font-weight-medium: 500;
-  --font-weight-bold: 600;
-  --font-weight-heavy: 700;
-  --font-weight-black: 800;
-  --font-weight-extrablack: 900;
+  --font-weight-medium: 600;
+
+  /**
+   * TRANSITIONS
+   * ======================================================== */
+  --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
+  --duration-fast: 150ms;
+  --duration-slow: 400ms;
+
+  /**
+   * ASPECT RATIOS
+   * ======================================================== */
+  --aspect-square: 1 / 1;
+  --aspect-wide: 16 / 9;
+
+  /**
+   * BORDER RADII
+   * ======================================================== */
+  --radius-xs: 1px;
+  --radius-sm: 2px;
+  --radius-full: 9999px;
+
+  /**
+   * FILTER VALUES
+   * ======================================================== */
+  --backdrop-filter: blur(10px);
+
+  /**
+   * Z-INDICES
+   * ======================================================== */
+  --z-index-tooltip-hover-target: 90;
+  --z-index-tooltip: 100;
+  --z-index-control-elements: 200;
+}
+
+/* THEMES (aka dark mode) */
+@media (prefers-color-scheme: dark) {
+  :root {
+    /* SEMANTICALLY NAMED COLOR
+   * =================================================================== 
+   *
+   * Text */
+    --color-text-primary: rgb(var(--base-color-white));
+    --color-text-secondary: rgba(var(--base-color-white), 50%);
+    --color-text-inverted-primary: rgb(var(--base-color-black));
+    --color-text-inverted-secondary: rgba(var(--base-color-black), 50%);
+
+    /* Background */
+    --color-bg-primary: rgb(var(--base-color-black));
+    --color-bg-secondary: rgb(var(--base-color-grey-900));
+    --color-bg-inverted-primary: rgb(var(--base-color-white));
+    --color-bg-inverted-secondary: rgb(var(--base-color-grey-100));
+    --color-bg-inverted-tertiary: rgba(var(--base-color-white), 20%);
+
+    /* Overlays */
+    --color-overlay: rgba(var(--base-color-white), 8%);
+    --color-overlay-inverted: rgba(var(--base-color-white), 80%);
+
+    /* Borders */
+    --color-border-default: rgba(var(--base-color-white), 20%);
+    --color-border-focus: rgba(var(--base-color-white), 70%);
+
+  }
 }

@@ -1,0 +1,19 @@
+:where(.text-xs) {
+  font-size: var(--text-xs);
+  letter-spacing: var(--tracking-wider);
+  line-height: var(--leading-normal);
+}
+
+:where(.text-sm) {
+  font-size: var(--text-sm);
+  letter-spacing: var(--tracking-wide);
+  line-height: var(--leading-normal);
+}
+
+:where(.text-primary) {
+  color: var(--color-text-primary);
+}
+
+:where(.text-secondary) {
+  color: var(--color-text-secondary);
+}
