@@ -1,4 +1,4 @@
-# DSI Auth
+# DSI Cloudflare Password
 
 This package can be used to add simple password-based authentication to a static
 website running on Cloudflare Workers. It does so by injecting a worker script
