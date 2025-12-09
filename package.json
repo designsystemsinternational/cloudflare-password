@@ -1,7 +1,6 @@
 {
-  "name": "cloudflare-password",
-  "private": true,
-  "version": "0.0.0",
+  "name": "@designsystemsinternational/cloudflare-password",
+  "version": "0.0.2",
   "type": "module",
   "scripts": {
     "dev:templates": "vite",
