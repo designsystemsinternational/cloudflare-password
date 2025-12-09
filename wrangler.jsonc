@@ -1,7 +1,7 @@
 // This file is simply used to test the package locally
 {
   "$schema": "node_modules/wrangler/config-schema.json",
-  "name": "auth-test",
+  "name": "cloudflare-password",
   "main": "worker/index.ts",
   "compatibility_date": "2025-12-02",
   "assets": {
