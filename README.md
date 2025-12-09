@@ -41,7 +41,7 @@ config for the static site.
 ```jsonc
 {
   // This makes sure that the worker runs as a part of the deployment
-  "main": "./node_modules/@designsystemsinternational/cloudflare-password/src/worker.ts",
+  "main": "./node_modules/@designsystemsinternational/cloudflare-password/worker/index.ts",
   "assets": {
     // This is needed because the binding is hard coded in the worker
     "binding": "ASSETS",
